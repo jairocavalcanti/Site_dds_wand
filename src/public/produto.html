@@ -1,0 +1,78 @@
+<div class="justify-content-center">
+
+    <h3 class="text-center">Adicione mais produtos</h3>
+    <div class="row">
+
+        <div class="col-md-2">
+
+        </div>
+        <form method="POST" action="" id="form-produto" name="form-produto" onsubmit="return salvarProduto(this);" >
+
+            <!-- Criando um groupo label + input   -->
+            <!-- este campo não pode ser editado e por isso deve estar desabilitado para alterações com readonly -->
+            <!-- e o valor padrão deverá ser zero para que quando o botão reset for pressionado já seja populado com "zero" -->
+            <div class="form-group">
+                <label for="id">Id</label>
+                <input type="text" id="id" name="id" size="50" maxlength="50" minlength="3" class="form-control"
+                    value="0" readonly required>
+            </div>
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" size="50" maxlength="50" minlength="3" class="form-control"
+                    required>
+            </div>
+            <div class="form-group">
+                <label for="descricao">Descricao</label>
+                <textarea name="descricao" id="descricao" rows="3" class="form-control" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="preco">Preco</label>
+                <input type="number" id="preco" name="preco" class="form-control">
+            </div>
+
+            <div class="btn-group gap-2 my-2">
+                <button type="submit" class="btn btn-primary" title="Enviar ...">
+                    <i class="fa fa-save fa-fw"></i> Salvar</button>
+
+                <button type="reset" onclick="" class="btn btn-success">
+                    <i class="fa fa-user-plus"></i> Novo</button>
+
+                <button type="button" class="btn btn-info" onclick="obterProdutos();">
+                    <i class="fa fa-users"></i> Carregar produtos</button>
+            </div>
+
+        </form>
+
+    </div>
+
+    <div class="container">
+
+        <table class="table table-striped table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Descricao</th>
+                    <th>Preco</th>
+                    <th><i class="fa fa-cogs"></i> Opções</th>
+                </tr>
+            </thead>
+            <tbody id="tb-produtos">
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">
+                        #Registros:
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+
+    </div>
+
+    <div id="retorno" class="card card-body my-2 p-5">
+        <h1>Ao retornar dados serão mostrados aqui para teste...</h1>
+    </div>
+
+</div>

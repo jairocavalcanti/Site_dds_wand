@@ -1,0 +1,30 @@
+{
+    "name": "wanderlei/dds-html-js-css",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+
+    "config": {
+		"optimize-autoloader": true,
+		"prepend-autoloader": false,
+		"platform": {
+			"php": "7.0"
+		}
+	},
+
+    "scripts" : {
+         "start": "php -S 0.0.0.0:9000 -t src/public"
+    },
+
+    "authors": [
+        {
+            "name": "Wanderlei Silva",
+            "email": "wander.silva@gmail.com"
+        }
+    ],
+    "require": {
+        "amphp/amp": "^2.5"
+    }
+}

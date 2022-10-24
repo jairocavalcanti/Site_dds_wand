@@ -1,0 +1,89 @@
+<div class="justify-content-center">
+
+    <h3 class="text-center">Entre em contato conosco</h3>
+    <div class="row">
+
+        <div class="col-md-2">
+
+        </div>
+        <form method="POST" action="" id="form-contato" name="form-contato">
+
+            <!-- Criando um groupo label + input   -->
+            <!-- este campo não pode ser editado e por isso deve estar desabilitado para alterações com readonly -->
+            <!-- e o valor padrão deverá ser zero para que quando o botão reset for pressionado já seja populado com "zero" -->
+            <div class="form-group">
+                <label for="id">ID</label>
+                <input type="text" id="id" name="id" size="50" maxlength="50" minlength="3" class="form-control" value="0" readonly  required>
+            </div>
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" size="50" maxlength="50" minlength="3" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="assunto">Assunto</label>
+                <select name="assunto" id="assunto" class="form-control" required>
+                <option value="" selected>Escolha um assunto... </option>
+                <option value="sugestao">Sugestão</option>
+                <option value="elogio">Elogio</option>
+                <option value="reclamacao">Reclamação</option>
+            </select>
+            </div>
+
+            <div class="form-group">
+                <label for="mensagem">Mensagem</label>
+                <textarea name="mensagem " id="mensagem" rows="3" class="form-control" required></textarea>
+            </div>
+
+            <div class="btn-group gap-2 my-2">
+                <button type="submit" class="btn btn-primary" title="Enviar ...">
+                <i class="fa fa-save fa-fw"></i> Salvar</button>
+                      
+                <button type="reset" onclick="" class="btn btn-success">
+                <i class="fa fa-user-plus"></i> Novo</button>
+                      
+                <button type="button" onclick="obterContatos();" class="btn btn-info">
+                <i class="fa fa-users"></i> Carregar contatos</button>
+            </div>
+
+        </form>
+
+    </div>
+
+    <div class="container">
+
+        <table class="table table-striped table-hover table-bordered">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Assunto</th>
+                <th>Mensagem</th>
+                <th><i class="fa fa-cogs"></i> Opções</th>
+            </tr>
+            </thead>
+            <tbody id="tb-contatos">
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">
+                        #Registros: 
+                    </td>    
+                </tr>
+            </tfoot>
+        </table>
+
+    </div>
+
+    <div id="retorno" class="card card-body my-2 p-5">
+          <h1>Ao retornar dados serão mostrados aqui para teste...</h1>
+    </div>
+
+</div>

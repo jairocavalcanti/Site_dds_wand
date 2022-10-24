@@ -1,0 +1,40 @@
+body{
+    padding-top: 120px;
+    font-size: .78rem;
+    background: linear-gradient(to bottom,rgb(36, 51, 58), #466176, #bed4ea);
+}
+main {
+    /* height: 100vh; */
+    min-height: 100vh;
+    background-color: #fafafa;
+}
+
+.btnx {
+    width: 150px;
+    height: 90px;
+}
+nav a:hover {
+    text-decoration: underline;
+    text-decoration-color: rgb(239, 190, 139);
+    text-decoration-style: double;
+}
+#faixa-deslizante{
+    padding: 2px;
+    background: linear-gradient(to right, rgb(240, 7, 7), rgb(214, 113, 6), rgb(240, 193, 142) );
+    position: fixed;
+    bottom: 30px;
+}
+.relogio-rodape{
+    border: 1px inset darkgray;
+}
+
+.circle {
+    margin: 0 auto;
+    width: 90px;
+    height: 90px;
+    background-color: black;
+    border-radius: 50%;
+}
+.container {
+    background-image: linear-gradient(rgb(212, 211, 211), rgb(235, 234, 234), #fafafa);
+}
